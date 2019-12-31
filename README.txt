@@ -1,3 +1,4 @@
+##ORM for PostgresSQL via macro
 Main goal - build queryes at compile time.
 The code is not tested well. Use in on your own risk.
 
@@ -9,7 +10,7 @@ you may enable verbose debugging output, by add these flags at compile time, e.g
 * -Dtxdebug
 	for transactions debugging
 
-###usage
+##usage
 require "./macro_orm"
 
 class Coin < MacroOrm
