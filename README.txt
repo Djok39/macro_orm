@@ -23,4 +23,6 @@ end
 
 p Coin.all("ORDER BY id")
 coin_id = Orm.db.scalar "UPDATE coin SET updated_at=CURRENT_TIMESTAMP WHERE tag=$1 RETURNING id", "BTC123"
+p Coin.find(coin_id)
 Orm.db.exec "DELETE FROM coin_algo WHERE coin_id=$1", coin_id
+
