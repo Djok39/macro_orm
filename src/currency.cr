@@ -336,4 +336,8 @@ class Sha1
   def to_s(io) : Nil
     io << @value.hexstring
   end
+
+  def <=>(other)
+    @value <=> other.value
+  end
 end
