@@ -271,7 +271,8 @@ class MacroOrm
       {% end %}\
     end
 
-    {%without_id = {} of String => Nil
+    {%
+      without_id = {} of String => Nil
       params_insert = [] of String
       params_update = [] of String
       sets = [] of String
@@ -498,7 +499,7 @@ spawn do
         # puts "yes"
       end
       while nextUp <= timeCurrent
-        nextUp += 60.seconds
+        nextUp += 420.seconds
       end
       sleep (nextUp - Time.utc)
     rescue ex
